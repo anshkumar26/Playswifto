@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    /* New global theme (from provided palette) */
+    --ps-primary: #1e88e5;
+    --ps-primary-2: #42a5f5;
+    --ps-accent-1: #90caf9;
+    --ps-accent-2: #b3e5fc;
+    --ps-accent-3: #e1f5fe;
+
+    /* App surfaces */
+    --ps-hero-1: #0b1020;
+    --ps-hero-2: #0f1c33;
+    --ps-hero-3: #0a1630;
+  }
+
+  body {
+    font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .ps-bg-hero {
+    background: linear-gradient(135deg, var(--ps-hero-1) 0%, var(--ps-hero-2) 40%, var(--ps-hero-3) 100%);
+  }
+
+  .ps-text-primary {
+    color: var(--ps-primary);
+  }
+
+  .ps-bg-primary {
+    background-color: var(--ps-primary);
+  }
+
+  .ps-bg-primary-2 {
+    background-color: var(--ps-primary-2);
+  }
+
+  .ps-ring-primary:focus {
+    outline: none;
+  }
+
+  @keyframes playswifto-fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes playswifto-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .playswifto-fade-up {
+    animation: playswifto-fadeUp 0.6s ease forwards;
+  }
+
+  .playswifto-float {
+    animation: playswifto-float 3s ease-in-out infinite;
+  }
+
+  @keyframes playswifto-drift {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+      opacity: 0.35;
+    }
+    50% {
+      transform: translate3d(24px, -36px, 0) rotate(8deg);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+      opacity: 0.35;
+    }
+  }
+
+  .playswifto-drift {
+    animation: playswifto-drift 9s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  .playswifto-drift-slow {
+    animation: playswifto-drift 14s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  .playswifto-drift-fast {
+    animation: playswifto-drift 6.5s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+}
