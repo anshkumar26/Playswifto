@@ -3,6 +3,7 @@ import UserLogin from "./logsign/UserLogin";
 import UserSignup from "./logsign/UserSignup";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
+import Profile from "./features/Profile";
 function App() {
   return (
     <BrowserRouter>
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<UserLogin />} />
         <Route path="/signup" element={<UserSignup />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );

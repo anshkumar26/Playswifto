@@ -188,7 +188,7 @@ const UserSignup = () => {
           </div>
 
           <div className="flex flex-wrap gap-2 mb-5">
-            {["Book venues", "Find coaches", "Join tournaments"].map((t) => (
+            {["Book venues", "Join tournaments"].map((t) => (
               <span
                 key={t}
                 className="text-xs font-semibold text-white/70 border border-white/15 bg-white/5 px-3 py-1.5 rounded-full"
@@ -242,7 +242,7 @@ const UserSignup = () => {
               />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-semibold text-white/70 mb-2">Role</label>
                 <select
@@ -258,15 +258,15 @@ const UserSignup = () => {
                     Admin
                   </option>
                 </select>
-              </div>
+              </div> */}
 
-              <div className="sm:self-end">
+              {/* <div className="sm:self-end">
                 <div className="rounded-2xl bg-white/5 border border-white/10 px-4 py-3">
                   <p className="text-xs text-white/60">Tip</p>
                   <p className="text-sm font-semibold text-white/80">Pick “Admin” only if you have the key.</p>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             {form.role === "ADMIN" ? (
               <div className="playswifto-fade-up">
